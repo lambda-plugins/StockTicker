@@ -9,7 +9,7 @@ import net.minecraft.network.play.client.CPacketUseEntity
 import net.minecraft.util.EnumHand
 
 internal object ModuleExample: PluginModule(
-    name = "ModuleExample",
+    name = "PluginModule",
     category = Category.MOVEMENT,
     description = "annoying",
     pluginMain = PluginExample
@@ -22,8 +22,8 @@ internal object ModuleExample: PluginModule(
         listener<ConnectionEvent.Disconnect> {
             if (disableOnDisconnect) disable()
                 listener<InputUpdateEvent>(6969) {
-            if (LagNotifier.paused && LagNotifier.pauseAutoWalk) return@listener
-
+            if ((LagNotifier.paused && LagNotifier.pauseAutoWalk)
+                  || it.movementInput !is MovementInputFromOptions) return@listener
             if (it.movementInput !is MovementInputFromOptions) return@listener
 
             when (mode.value.displayName) {
