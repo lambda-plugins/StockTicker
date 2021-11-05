@@ -8,8 +8,8 @@ import net.minecraft.entity.Entity
 import net.minecraft.network.play.client.CPacketUseEntity
 import net.minecraft.util.EnumHand
 
-internal object GridWalk: PluginModule(
-    name = "GridWalk",
+internal object ModuleExample: PluginModule(
+    name = "ModuleExample",
     category = Category.MOVEMENT,
     description = "annoying",
     pluginMain = PluginExample
