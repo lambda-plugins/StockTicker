@@ -1,11 +1,10 @@
 {
-  "name": "PluginExample",
+  "name": "PluginStocks",
   "version": "1.0",
   "authors": [
-    "me",
-    "you"
+    "ItCameFr0mMars"
   ],
-  "description": "does absolutely nothing",
+  "description": "shows stock",
   "url": "",
   "min_api_version": "2.05.01",
   "required_plugins": [],
