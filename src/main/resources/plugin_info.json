@@ -4,7 +4,7 @@
   "authors": [
     "ItCameFr0mMars"
   ],
-  "description": "shows stock",
+  "description": "Live updating stock price",
   "url": "",
   "min_api_version": "2.05.01",
   "required_plugins": [],

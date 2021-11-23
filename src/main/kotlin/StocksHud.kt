@@ -9,7 +9,7 @@ import com.lambda.client.plugin.api.PluginLabelHud
 internal object StocksHud: PluginLabelHud(
     name = "Stocks",
     category = Category.MISC,
-    description = "Info about a stock",
+    description = "Live updating stock price",
     pluginMain = PluginStocks
 ) {
     private var symbol by setting("Symbol", "TSLA")
