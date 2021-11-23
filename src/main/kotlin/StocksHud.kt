@@ -35,6 +35,7 @@ internal object StocksHud: PluginLabelHud(
                     price = Gson().fromJson(WebUtils.getUrlContents(url), StockData::class.java).c
                 } catch (e: Exception) {
                     LambdaMod.LOG.error("Failed to connect to finnhub api", e)
+                    MessageSendHelper.sendWarningMessage("[StockTicker] Token not accepted: $token")
                 }
             }
         }
@@ -45,7 +46,7 @@ internal object StocksHud: PluginLabelHud(
 
     private fun sendWarning() {
         MessageSendHelper.sendWarningMessage(
-            "This module uses an external API, finnhub.io, which requires an api token to use. " +
+            "[StockTicker] This module uses an external API, finnhub.io, which requires an api token to use. " +
                 "Go to https://finnhub.io/dashboard and sign up for an account and copy your api token. " +
                 "Once you have gotten your api token, you can run this command: " +
                 ";set Stocks Token (paste token here)"
